@@ -3,8 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+ /*
+}
+//Escritorio grande 
+@media only screen and (min-width: 992px) and (max-width: 1199px){
 
+}
 
+//Escritorio pequeño /tablet
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+}
+
+/* Tablets y phablets
+@media only screen and (min-width: 576px) and (max-width: 767px){
+
+}
+
+/* Teléfonos 
+@media only screen and (max-width: 575px){
+
+}
+
+*/
 :root {
     --color-de-fondo: #1B1A17;
     --color2-de-fondo: #1F1E1B;
@@ -13,6 +34,285 @@
     --color2-titulos: #FF8303;
     --color-parrafos: #F0E3CA;
 }
+/*Escritorio extra grande */
+
+@media only screen and (min-width: 1200px){
+
+    body{
+        background-color: var(--color-de-fondo);
+    }
+    
+    nav {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .bi-list {
+        display: none;
+    }
+    
+    .bi-x-lg {
+        display: none;
+    }
+    
+    #links ul{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin-right: 20px;
+    }
+    
+    #links ul a{
+        text-decoration: none;
+        font-size: 20px;
+        font-family: var(--fuente-de-letra);
+        color: var(--color-parrafos);
+        font-weight: bold;
+    }
+    
+    #links ul li:first-child a{
+        color: var(--color-titulos);
+    }
+    
+    
+    #links ul a:hover{
+        color: var(--color-titulos);
+    }
+    
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30vh;
+        padding-top: 30px;
+        margin: 30px;
+        font-family: var(--fuente-de-letra);
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+        margin-left: 10vh;
+        padding-top: 20vh;
+    }
+    
+    .info h1{
+        font-size: 40px;
+        color: var(--color-titulos);
+    }
+    
+    .info h2{
+        font-size: 32px;
+        color: var(--color-parrafos);
+    }
+    
+    .info p{
+        font-size: 16px;
+        color: var(--color-parrafos);
+        width: 50vh;
+    }
+    
+    .fotos-header{
+        width: 100%;
+    }
+    
+    #fondo{
+        position: absolute;
+        width: 500px;
+    }
+    
+    #foto{
+        position: relative;
+        top: 50%;
+        left: 25%;
+        border-radius: 15px;
+    }
+    
+    main{
+        margin-top: 40vh;
+    }
+    
+    .sobre-mi{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        margin-bottom: 10vh;
+    }
+    
+    .sobre-mi p{
+        color: var(--color-parrafos);
+        font-size: 20px;
+        font-family: var(--fuente-de-letra);
+        width:50%;
+        text-align: justify;
+    }
+    
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: c;
+        align-items: center;
+        font-family: var(--fuente-de-letra);
+        color: var(--color-parrafos);
+        margin-bottom: 10vh;
+    }
+    
+    .skills h2{
+        font-size: 40px;
+        margin-bottom: 5vh;
+    }
+    
+    .contenedor-skills{
+        display: flex;
+        gap: 50px;
+    }
+    
+    .tarjeta-skill{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color2-de-fondo);
+        padding: 30px;
+        gap: 20px;
+        border-radius: 10px;
+        transition: all 1s ease-in-out;
+    }
+    
+    .tarjeta-skill:hover{
+        transform: scale(1.2)
+    }
+    .hover-skills{
+        opacity: 1;
+        width: auto;
+        height: auto;
+    }
+    #original{
+        position: absolute;
+        cursor: pointer;
+    }
+    
+    #original:hover{
+        opacity: 0;
+    }
+    
+    .misProyectos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20vh;
+    }
+    
+    .misProyectos img{
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .tarjeta{
+        font-family: var(--fuente-de-letra);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 15px;
+        gap: 30px;
+        padding: 10vh;
+        margin: 30px;
+        background-color: var(--color2-de-fondo);
+    }
+    
+    .tarjeta h3{
+        color: var(--color-titulos);
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .tarjeta span{
+        color: var(--color-parrafos);
+        border-bottom: 2px solid #A35709;
+        padding-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tarjeta p{
+        color: var(--color-parrafos);
+        text-align: center;
+    }
+    
+    .tarjeta a{
+        color: var(--color-parrafos);
+        padding: 10px;
+        background-color: #32312E;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    
+    .tarjeta a:hover{
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.2);
+        background-color: #FF8303;
+    }
+    
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10vh;
+        font-family: var(--fuente-de-letra);
+    }
+    
+    .logo-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .logo-footer p{
+        width: 40vh;
+        font-size: 20px;
+        text-align: center;
+        color: var(--color-parrafos);
+    }
+    
+    .contactos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .contactos h2{
+        color: var(--color-titulos);
+        font-size: 40px;
+    }
+    
+    .redes{
+        display: flex;
+        font-size: 20px;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--color-parrafos);
+    }
+    
+    .redes i{
+        color: var(--color-parrafos);
+    
+    }
+    .redes i:hover{
+        cursor: pointer;
+        color: var(--color-titulos);
+        transition: all 0.5 ease-in-out;
+    }
+    
+
+}
+   
 
 
 @media only screen and (max-width : 575px) {
